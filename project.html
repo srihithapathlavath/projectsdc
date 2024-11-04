@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>coffee shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+    .{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'merriweather',serif;
+    }
+    .all-content
+    {
+        background: #f7f5f2;
+    
+    }
+    html ::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    html ::-webkit-scrollbar-thumb{
+        background: #b2744c;
+        border-radius: 10px;
+    }
+    html ::-webkit-scrollbar{
+        width: 10px;
+    
+    }
+    #navbar{
+        background-color: #b2744c;
+    }
+    #logo img{
+        border-radius: 5px;
+        width: 120px;
+        height: 70px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .navbar-nav{
+        margin-left: 50px;
+    }
+    .nav-item .nav-link{
+        color: black;
+        margin-left: 10px;
+        font-weight: bold;
+    
+    }
+    .nav-item .nav-link:hover{
+        background-color: #f7f5f2;
+        border-radius: 5px;
+        color: black;
+    }
+    #navbar form button{
+        background: black;
+        color: white;
+        border: 1px solid white;
+    }
+    
+    #home{
+        width: 100%;
+        height: 90vh;
+        background:url("./home3.jpg")no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 88%;
+        
+    
+    }
+    #home .content{
+        padding-top: 210px;
+        margin-left: 56px;
+    }
+    #home .content h3{
+        font-size: 50px;
+        color: black;
+    }
+    #btn{
+        width: 150px;
+        height: 36px;
+        margin-top: 20px;
+        background: rgba(128, 89, 47, 0.735);
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+        transition: 0.5s ease;
+        cursor: pointer;
+    
+    }
+    #btn:hover{
+        background: #b2744c;
+        color: white;
+    }
+    #abou{
+        width: 100%;
+        height: 100vh;
+    
+    }
+    #about .container{
+        padding-top: 70px;
+    }
+    .heading{
+        text-align: center;
+        margin-bottom: 50px;
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+    
+    }
+    .heading span{
+        color: #b2744c;
+    
+    }
+    #about .card{
+        border-radius: 10px;
+    }
+    #about .card img{
+        border-radius: 10px;
+    }
+    #about-btn{
+        width: 200px;
+        height: 36px;
+        background: transparent;
+        border:2px solid #b2744c;
+        color: #b2744c;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    #about-btn:hover{
+        background-color: #b2744c;
+        color: white;
+    }
+    
+    #top-cards{
+        width: 100%;
+        height: 60vh;
+        background: #f7f5f2;
+        transition: 0.5s;
+        cursor: pointer;
+    
+    }
+    .heading2{
+        color: black;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .heading2 span{
+        color: #b2744c;
+    }
+    #top-cards .container{
+        margin-top: 30px;
+    
+    }
+    #top-cards .card {
+        border-radius: 20px;
+    }
+    #top-cards .card img{
+        border-radius: 20px;
+    }
+    #top-cards  .card:hover{
+        transform: translateY(-5px);
+    }
+    
+    
+    
+    #menu{
+        width: 100%;
+        margin-top: 90px;
+    
+    }
+    .heading3{
+        text-align: center;
+        font-size: 30px;
+        color: #b2744c;
+        font-weight: bold;
+        border-bottom: 2px solid #b2744c;
+    
+    }
+    #container2{
+        margin-top: 40px;
+    }
+    
+    
+    #menu .card{
+        box-shadow: rgba(149,157,165,0.2);
+    }
+    .star i{
+        color: #b2744c;
+    }
+    #menu h3{
+        text-align: center;
+        color: #b2744c;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    #menu p{
+        font-size: 16px;
+        color: #b2744c;
+        padding-top: 10px;
+    }
+    #menu p span{
+        float:right;
+        cursor: pointer;
+    }
+      
+    
+    #product{
+        width:100%;
+    
+    }
+    .heading4{
+        text-align: center;
+        color: #b2744c;
+        font-size: 30px;
+        padding-top: 250px;
+        font-weight: bold;
+        border-bottom: 5px solid #b2744c;
+    
+    }
+    #container3{
+        margin-top: 30px;
+    
+    
+    }
+    #product h3{
+        text-align: center;
+        font-size: 23px;
+        color: #b2744c;
+    }
+    #product p{
+        color: #b2744c;
+        padding-top: 40px;
+    
+    }
+    #product p span{
+        float: right;
+        cursor: pointer;
+    }
+    #gallary{
+        width: 100%;
+    }
+    .heading5{
+        text-align: center;
+        color: black;
+        margin-top: 60px;
+        
+        font-weight: bold;
+    }
+    #gallary .heading5 span{
+        color: #b2744c;
+    }
+    #gallary .card{
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    #gallary .card img{
+        border-radius: 10px;
+    }
+    
+    #contact{
+        width: 100%;
+        height: 100vh;
+        padding-top: 70px;
+    }
+    #contact .container{
+        width: 100%;
+        height: 80vh;
+        background-color: linear-gradient(90deg,white 80%,#b2744c 20%);
+        border-radius: 10px;
+    }
+    .heading6{
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 70px;
+    }
+    .heading6 span{
+        color: #b2744c;
+    }
+    #contact p{
+        font-weight: bold;
+        font-size: 13px;
+        color: black;
+    }
+    #contact input{
+        width: 360px;
+    
+    cursor: pointer;    border: none;
+        border-bottom: 1px solid;
+    }
+    #contact-btn{
+        width: 200px;
+        height: 36px;
+        border: none;
+        background: #b2744c;
+        color: white;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    #col{
+        width: 40%;
+        height: 56vh;
+        background: black;
+        margin-top: 78px;
+    }
+    #contact h1{
+        color: white;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #contact #col p{
+        font-size: 15px;
+        color: white;
+        margin-left: 13px;
+        margin-top: 30px;
+    }
+    @media screen and(max-width:766px){
+        #contact .container{
+            background: white;
+        }
+        #col{
+            width: 100%;
+            background: #b2744c;
+        }
+        #contact{
+            height: 150vh;
+        }
+    }
+    @media screen and (max-width:400px){
+        #contact input{
+            width: 250px;
+        }
+    }
+    #blogs{
+        width: 100%;
+    }
+    #blogs .heading7{
+        text-align: center;
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+    }
+    #blogs .heading7 span{
+        color: #b2744c;
+    }
+    #blogs .container{
+        margin-top: 60px;
+    }
+    #blogs h5{
+        color: #b2744c;
+    }
+    #blog-btn{
+        width: 200px;
+        height: 36px;
+        border: none;
+        color: white;
+        background: #b2744c;
+    }
+    #footer{
+        width: 100%;
+        background: #b2744c;
+        margin-top: 50px;
+    }
+    .footer-logo img{
+        width: 120px;
+        border-radius: 5px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    #footer .social-links i{
+        font-size: 17px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        padding: 10px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="all-content">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" id="logo"><img src="./logo.jpg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#product">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Gallary</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#blogs">Blogs</a>
+                  </li>
+                </ul>
+                   <form clss="d-flex">
+                  <input class=" px-2 search" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn0" type="submit">Search</button>
+                   </form>
+              </div>
+            </div>
+          </nav>       
+<section id="home">
+  <div class="content">
+    <h3>Start Your Day With a<br> Fresh Coffee</h3>
+    <p>boost your productivity and build your mood<br> with a cup of coffee in the morning</p>
+    <button id="btn">Shop Now</button>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="heading"><h2>About<span>Us</span></h2></div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./b1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>What Makes Our Coffee Special?</h3>
+        <p>coffee can be prepared in numerous ways,from espresso and french press to 
+          pour-over and cold brew,offering a wide variety of experiance.each method highlights different
+          aspects of the beans'flavor.<br><br>
+          coffee is a widely consumed beverge that many people enjoy,but is coffee good for periods 
+            or should one avoid the beverage during that time? while there is an ongoing debate about how caffeine affects
+            menstruating can have both advantages and disadvantages
+          
+        </p>
+        <button id="about-btn">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="top-cards">
+  <div class="heading">Top <span>Categories</span></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <img src="./d7.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <img src="./d4.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <img src="./d5.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="menu">
+   
+      <div class="heading"><h1>Menu</h1></div>
+      <div class="container">
+
+      </div>
+    <div class="container" id="container2">
+
+      <div class="row">
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./s1.jpg" alt="">
+
+            <div class="card-body">
+              <div class="star text-center">
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+               <i class="fa-regular fa-star"></i>
+              </div>
+              <h1>Coffee</h1>
+              <p>$99<strike>$100</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./s2.jpg" alt="">
+
+            <div class="card-body">
+              <div class="star text-center">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <h1>Coffee</h1>
+              <p>$110<strike>$119</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+            </div>
+        
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./s3.jpg" alt="">
+
+            <div class="card-body">
+              <div class="star text-center">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <h1>Coffee</h1>
+              <p>$150<strike>$159</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./s4.jpg" alt="">
+
+            <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h1>Coffee</h1>
+                <p>$99<strike>$100</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="./s5.jpg" alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-regular fa-star"></i>
+                </div>
+                <h1>Coffee</h1>
+                <p>$105<strike>$111</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+              </div>
+            </div>  
+          </div> 
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="./s6.jpg" alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h1>Coffee</h1>
+                <p>$169<strike>$170</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="./s7.jpg" alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h1>Coffee</h1>
+                <p>$120<strike>$125</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="./s8.jpg" alt="">
+
+              <div class="card-body">
+                <div class="star text-center">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h1>Coffee</h1>
+                <p>$199<strike>$200</strike> <span class="fa-solid fa-cart-shopping"></span></p>          
+              </div>
+            </div>
+          </div>
+     </div>
+    </div>
+
+  </section>
+<section id="product">
+<div class="container">
+    <div class="heading 4">Product</div>
+</div>
+<div class="container" id="container3">
+    <div class="row">
+        <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src="./arabic.jpg" alt="">  
+              <div class="card-body">
+                <h3> Arabic Coffee</h3>
+                <p>$120<strike>$150</strike> <span class="fa-solid fa-card-shopping"></span></p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src="./22.jpg" alt="">  
+              <div class="card-body">
+                <h3> Espresso Coffee</h3>
+                <p>$99<strike>$110</strike> <span class="fa-solid fa-card-shopping"></span></p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src="./33.jpg" alt="">  
+              <div class="card-body">
+                <h3> Espresso Coffee</h3>
+                <p>$130<strike>$149</strike> <span class="fa-solid fa-card-shopping"></span></p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 py-3">
+            <div class="card">
+              <img src="./44.jpg" alt="">  
+              <div class="card-body">
+                <h3> Coffee bean</h3>
+                <p>$190<strike>$200</strike> <span class="fa-solid fa-card-shopping"></span></p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="container" id="gallary">
+    <div class="heading">Our <span>Gallary</span></div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./01.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./11.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./08.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./12.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./05.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img src="./06.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="heading6">Contact <span>Us</span></div>
+                <p>We value your feedback and are here to assist with any questions or concerns.<br>
+                     Whether you need more information about our services, have a suggestion
+                 
+                </p>
+                <input type="text" class="form-control" placeholder="Name" aria-label="default input example"><br>
+                <input type="email" class="form-control" placeholder="Email" aria-label="default input example"><br>
+                <input type="number" class="form-control" placeholder="Phone" aria-label="default input example"><br>
+                <button id="contact-btn">Send Message</button>
+            </div>
+                <div class="col-md" id="col">
+                    <h1>Info</h1>
+                    <p><i class="fa-regular fa-envelope"></i>example@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+9100000000000</p>
+                    <p><i class="fa-solid fa-building-columns"></i> karachi sindhe hyd</p>
+                    <p>We value your feedback and are here to assist with any questions or concerns</p>
+
+                </div>
+            
+        </div>
+    </div>
+</section>
+<section id="blogs">
+    <div class="heading">Latest <span>Blogs</span></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md py-3 py-md-0">
+                <div class="card">
+                    <img src="./v4.jpg" alt="">
+                    <div class="card-body">
+                        <h3>lorem,ipsum dolor.</h3>
+                        <h5>Admin/ 6 march 2023</h5>
+                        <p> lorem ipsum sit amet consectetur adipiscing elit.Non ipsum sed quad,hic unde tempore cum! qui
+                            ipsum nemo!
+                        </p>
+                        <button id="blog-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md py-3 py-md-0">
+                <div class="card">
+                    <img src="./v5.jpg" alt="">
+                    <div class="card-body">
+                        <h3>lorem,ipsum dolor.</h3>
+                        <h5>Admin/ 6 march 2023</h5>
+                        <p> lorem ipsum sit amet consectetur adipiscing elit.Non ipsum sed quad,hic unde tempore cum! qui
+                            ipsum nemo!
+                        </p>
+                        <button id="blog-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+<footer id="footer">
+    <div class="footer-logo text-center">
+       <img src="./logo.jpg" alt="">
+
+    </div>
+    <div class="social-links text-center">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+
+</footer>
+
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
